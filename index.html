@@ -1,47 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<meta name="description" content="Gabrielle Essence Eau De Parfum">
+<meta name="keywords" content="Perfume,of CHANEL">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+  
   <title>Frontend Mentor | Product preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
+body{
+  background-color:papayawhip;
+}
+.parent{
+  height: 100vh;
+  width: 100%;
+ 
+  display: inline-flex; 
+  justify-content: center;
+  align-items: center;
+}
+.img{
+  background: url(/images/image-product-desktop.jpg)
+  no-repeat center center/cover;
+  height: 300px;
+  width: 200px;
+  border-radius: 5px 0 0 5px;
+}
+.info-items{
+  background-color: white;
+  box-sizing: border-box;
+  border-radius:0 5px 5px 0;
+  height: 300px;
+  width: 200px;
+  padding-left: 12px;
+}
+.pp{
+  color: hsl(228, 12%, 48%);
+  font-family: "Montserrat", serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  padding-top: 5px;
+}
+p{
+  color: hsl(228, 12%, 48%);
+  font-family: "Montserrat", serif;
+  font-size: 11px;
+}
+h1{
+  color: hsl(212, 21%, 14%);
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1;
+}
+strong{
+   font-family: "Fraunces", serif;
+   font-size: 23px;
+   color:hsl(158, 36%, 37%) ;
+}
+del{
+  color: hsl(228, 12%, 48%);
+  font-size: 12px;
+  margin-left: 5px;
+ 
+  
+ 
+  
+}
+button{
+  background-color:hsl(158, 36%, 37%) ; 
+  color: white;
+  border: none;
+  padding: 8px 35px;
+  border-radius: 5px;
+  text-align: center;
+ 
+  margin-top: 13px;
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
+ 
+}
+.fa{
+  padding-right: 10px;
+  
+}
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media (max-width:600px){
+            .parent{
+                flex-direction: column;
+                
+            }
+            .info-items{
+        width: 100%;
+        border-radius: 5px 5px ;
+                }
+                .img{
+                  width: 100%;
+                }
+        }
+        @media (min-width:601px) and (max-width:992px){
+            .parent{
+                flex-wrap: wrap;
+                
+            }
+            .item{
+        width: 49%;
+                }
+        }
   </style>
 </head>
-
 <body>
-
-  Perfume
-  <img src="./images/image-product-desktop.jpg" alt="">
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge,
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
-
+<div class="parent">
+  <div class="img"></div>
+  <div class="info-items">
+    <p class="pp">PERFUME</p>
+    <h1>Gabrielle Essence Eau De Parfum</h1>
+    <p>A floral, solar and voluptuous interpretation composed by Olivier Polge,
+    Perfumer-Creator for the House of CHANEL.</p>
+   <strong>$149.99</strong> <del>$169.99</del>
+  <button style="font-size:14px"> <i class="fa fa-shopping-cart"></i>Add to Cart</button>
+    
+  </div>
+</div>
+ 
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
-
 </html>
